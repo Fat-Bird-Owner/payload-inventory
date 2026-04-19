@@ -1,6 +1,8 @@
 var inventoryDialog = null;
 var inventoryPane = null;
 
+var blockInventory = [];
+
 Events.on(ClientLoadEvent, () => {
 
 const statustable = Vars.ui.hudGroup.find("statustable");
@@ -28,20 +30,13 @@ p.background(Tex.button);
 }).grow();
 }
 
-refreshPane();
-inventoryDialog.show();
-
-} catch(e){
-Vars.ui.showInfoToast(e);
-}});
-
 function refreshPane(){
 if(!inventoryPane) return;
 
 inventoryPane.clear();
 
-for(let i = 0; i < Blocks.all.size; i++){
-const block = Blocks.all.get(i);
+for(let i = 0; i < blockInventory.length; i++){
+const block = blockInventory[i];
 
 const b = new Button();
 b.image(block.uiIcon).size(40);
@@ -53,5 +48,14 @@ print("Selected: " + block.name);
 inventoryPane.add(b);
 }
 }
+
+  
+refreshPane();
+inventoryDialog.show();
+
+} catch(e){
+Vars.ui.showInfoToast(e);
+}});
+
 
 });

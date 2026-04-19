@@ -14,7 +14,8 @@ button.image(Core.atlas.find("beryllium-wall-large")).size(40);
 inventoryButton.add(button);
 
 button.clicked(() => {
-
+try{
+  
 if(inventoryDialog == null){
 inventoryDialog = new BaseDialog("inventory");
 inventoryDialog.addCloseButton();
@@ -30,7 +31,9 @@ p.background(Tex.button);
 refreshPane();
 inventoryDialog.show();
 
-});
+} catch(e){
+Vars.ui.showInfoToast(e);
+}});
 
 function refreshPane(){
 if(!inventoryPane) return;

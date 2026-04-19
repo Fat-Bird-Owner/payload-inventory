@@ -1,0 +1,29 @@
+name: "pt"
+
+displayName: "Payload Inventory"
+repo: "Fat-Bird-Owner/payload-inventory"
+subtitle: "v1[grey[]] - [accent[]]Payload Inventory[[]]"
+author: "Fat Bird's Owner"
+
+description: "
+Debug panel with a varity of features.
+
+Such as:[accent[]]
+- Clear unit
+- Change team
+- Stop player
+- Disable gameover
+- Disable unitCap
+- Editor mode [grey[]](Crashes if saved while enabled)[[]]
+- Spawn unit/Unit library
+- Fill core
+- And run javascript
+"
+
+iosCompatible: true
+version: "v1[grey] - [accent]Payload Inventory[]"
+minGameVersion: "156"
+dependencies: []
+hidden: false
+
+contentOrder:[]
